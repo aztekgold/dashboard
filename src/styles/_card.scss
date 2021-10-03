@@ -1,0 +1,24 @@
+.dash-card{
+    border-radius: $border-radius--main;
+    box-shadow: $shadow--main;
+    background-color: $white;
+    margin-bottom: 1em;
+    &__header, &__footer, &__body{
+        padding: 1.45em;
+    }
+    &__header{ 
+        border-bottom: $border-main; 
+        display: flex;
+        justify-content: space-between;
+    }
+    &__footer{ 
+        border-top: $border-main;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    &__heading{
+        margin: 0;
+        font-size: 1.25em;
+    }
+}

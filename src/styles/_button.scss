@@ -1,0 +1,23 @@
+.dash-btn{
+    background-color: $primary;
+    display: inline-block;
+    position: relative;
+    border: $border-main;
+    border-radius: $border-radius--main;
+    padding: 12px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: $white;
+    &:hover{
+        box-shadow: 0px 4px 15px rgba($primary,.25);
+        background-color: darken($primary,10%);
+    }
+    &--secondary{
+        background-color: transparent;
+        color: black;
+        &:hover{
+            box-shadow: none;
+            background-color: #ddd;
+        }
+    }
+}

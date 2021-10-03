@@ -1,0 +1,73 @@
+.dash-value{
+    &__value{
+        display: flex;
+        align-items: center;
+    }
+    &__source{
+        font-size: 0.85em;
+        color: $color--muted;
+    }
+    &__value-indicator{
+        display: inline-block;
+        padding: 4px;
+        font-size: 0.85em;
+        margin: 0 0.5em;
+        border-radius: $border-radius--main;
+        animation: indicatorFadeIn .25s ease;
+        opacity: 1;
+        &>div{
+            display: flex;
+            align-items: center;
+        }
+        &--up {
+            background-color: rgb(205, 255, 205);
+            color: darken(rgb(205, 255, 205), 65%)
+        }
+        &--down {
+            background-color: rgb(255, 205, 205);
+            color: darken(rgb(255, 205, 205), 65%)
+        }
+    }
+    &__value--lg{
+        font-size: 1.45em;
+    }
+}
+
+@keyframes indicatorFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.dash-chart {
+    margin-bottom: 2em;
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .5em;
+    }
+    &__title{
+        color: $color--muted;
+    }
+    &__value{
+        font-weight: bold;
+    }
+    &__percentage-bar{
+        height: 8px;
+        border-radius: $border-radius--main;
+        background-color: #ebebeb;
+        overflow: hidden;
+        &::after{
+            content: '';
+            display: block;
+            height: 100%;
+            background-color: $primary;
+            width: var(--percentage);
+            transition: width 1s ease;
+        }
+    }
+}

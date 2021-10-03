@@ -1,0 +1,52 @@
+@import 'vars';
+@import 'reset';
+@import 'card';
+@import 'chart';
+@import 'button';
+
+body{
+    background-color: $bg-body;
+    padding: 1em;
+}
+
+.dash-heading{
+    justify-content: first baseline;
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    font-weight: bold;
+    &--lg{
+        font-weight: bold;
+        font-size: 1.45em;
+    }
+}
+
+.mb-1{
+    margin-bottom: .5em;
+}
+
+.flex{
+    display: flex;
+}
+
+.row{
+    display: flex;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    flex-wrap: wrap;
+}
+
+.g4, .g8, .g12{
+    width: 100%;
+    padding: 0 0.5em;
+}
+
+@media screen and (min-width: 1000px) {
+    
+    .g4{
+        width: 33.33%;
+    }
+    
+    .g8{
+        width: 66.66%;
+    }
+}
